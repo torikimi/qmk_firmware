@@ -8,6 +8,8 @@
 
 #define SOFT_SERIAL_PIN D3
 
+#define SPLIT_USB_DETECT
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.

@@ -2,3 +2,5 @@
 
 # ここから自分で書き加えた
 SPLIT_KEYBOARD = yes
+
+SERIAL_DRIVER = bitbang
