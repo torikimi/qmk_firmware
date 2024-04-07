@@ -3,6 +3,11 @@
 
 #pragma once
 
+//ここから自分で書き加えた
+#define MASTER_LEFT
+
+#define SOFT_SERIAL_PIN D3
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
