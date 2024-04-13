@@ -13,11 +13,11 @@ SERIAL_DRIVER = bitbang
 # http://www.neko.ne.jp/~freewing/hardware/qmk_firmware_test_analog_joystick_function_psp2000/
 # ポインティングデバイスにジョイスティックを使うと宣言  
 # x方向はいい感じに動いたが、y方向は全く動かない。ジョイスティックが壊れているのか、キャリブレートが間違っているのか不明
-POINTING_DEVICE_ENABLE = yes
-POINTING_DEVICE_DRIVER = analog_joystick
+#POINTING_DEVICE_ENABLE = yes
+#POINTING_DEVICE_DRIVER = analog_joystick
 # 多分この二行は意味ない？ような気がした
-JOYSTICK_ENABLE = yes
-JOYSTICK_DRIVER = analog
+#JOYSTICK_ENABLE = yes
+#JOYSTICK_DRIVER = analog
 
 
 # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_encoders.md

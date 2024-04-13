@@ -16,21 +16,21 @@
 
 //---    ジョイスティック    ---//
 // ジョイスティックのピンの定義
-#define ANALOG_JOYSTICK_X_AXIS_PIN F7
+//#define ANALOG_JOYSTICK_X_AXIS_PIN F7
 
-#define ANALOG_JOYSTICK_Y_AXIS_PIN B1
+//#define ANALOG_JOYSTICK_Y_AXIS_PIN B1
 
-#define ANALOG_JOYSTICK_CLICK_PIN B3
+//#define ANALOG_JOYSTICK_CLICK_PIN B3
 
 // 自動で移動量を決定？
-#define ANALOG_JOYSTICK_AUTO_AXIS	
+//#define ANALOG_JOYSTICK_AUTO_AXIS	
 
 // xを反転
-#define POINTING_DEVICE_INVERT_X
+//#define POINTING_DEVICE_INVERT_X
 
 // たぶん意味ない
-#define JOYSTICK_BUTTON_COUNT 1
-#define JOYSTICK_AXES_COUNT 2
+//#define JOYSTICK_BUTTON_COUNT 1
+//#define JOYSTICK_AXES_COUNT 2
  
 
 
