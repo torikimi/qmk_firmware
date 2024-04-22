@@ -22,10 +22,10 @@ SERIAL_DRIVER = bitbang
 
 # https://github.com/qmk/qmk_firmware/blob/master/docs/feature_encoders.md
 # エンコーダーを使うと宣言
-ENCODER_ENABLE = yes
+# ENCODER_ENABLE = yes  いったんコメントアウト
 
 # エンコーダのマッピングを設定 スクロールや、音量の上げ下げを割り当てるために必要
-ENCODER_MAP_ENABLE = yes
+# ENCODER_MAP_ENABLE = yes  いったんコメントアウト
 
 # マウスキーを使うと宣言 スクロールや、クリックを使うために必要
 MOUSEKEY_ENABLE = yes

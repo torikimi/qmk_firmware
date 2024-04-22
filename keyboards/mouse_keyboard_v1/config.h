@@ -36,6 +36,7 @@
 
 //---     エンコーダ     ---//
 //マスター側にはエンコーダはない
+/* いったんコメントアウト
 #define ENCODERS_PAD_A { }
 #define ENCODERS_PAD_B { }
 #define ENCODER_RESOLUTIONS { }
@@ -43,6 +44,7 @@
 #define ENCODERS_PAD_A_RIGHT { F7 }
 #define ENCODERS_PAD_B_RIGHT { B1 }
 #define ENCODER_RESOLUTIONS_RIGHT { 4 }
+*/
 
 /*
  * Feature disable options
