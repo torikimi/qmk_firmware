@@ -28,7 +28,7 @@
 // xを反転
 //#define POINTING_DEVICE_INVERT_X
 
-// たぶん意味ない
+// 自分でマウスレポートを作成する場合はここをコメントアウト
 //#define JOYSTICK_BUTTON_COUNT 1
 //#define JOYSTICK_AXES_COUNT 2
  

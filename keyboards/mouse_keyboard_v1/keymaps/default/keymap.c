@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
+#include <print.h>
 
 
 
@@ -157,10 +158,64 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
-// これはたぶん意味ない
+
+
+/* ジョイスティックの設定 */
+// キーボードから出しているピンが1つしかADCに対応していなかった。そのため、1つの軸しか反応しなかったと思われる。
+// ２つ以上のアナログピンを確保できれば、このプログラムで動作できるはず。このプログラムは、https://blog.yushakobo.jp/entry/2021/12/10/120000　から引用。
+// もし動作しなければ、ジョイスティックをマウスとして使う設定をQMKが配布しているので、それを使う。https://github.com/qmk/qmk_firmware/blob/master/docs/feature_pointing_device.md
+
 /*
+#ifdef JOYSTICK_ENABLE
+
+// Change this
+
+char arrow_keys[4] = {KC_UP, KC_LEFT, KC_DOWN, KC_RIGHT}; // up, left, down, right
+
+static int joystickThreshold = 6; // Value to prevent joystick drift
+
+static int joystickResolution = 24; // Decide the movement speed of the joystick
+
+
+
 joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
-    [0] = JOYSTICK_AXIS_IN(F7, 300, 600, 900),
-    [1] = JOYSTICK_AXIS_IN(B1, 0, 1000, 2000)
+
+    [0] = JOYSTICK_AXIS_VIRTUAL,
+
+    [1] = JOYSTICK_AXIS_VIRTUAL
+
 };
+
+
+
+void joystick_task(){
+
+        report_mouse_t currentReport = pointing_device_get_report();
+        int xValue = analogReadPin();
+        int yValue = analogReadPin();
+
+        currentReport.x = (512 - xValue) / joystickResolution; 
+
+        currentReport.y = (yValue - 512) / joystickResolution;
+
+        #ifdef CONSOLE_ENABLE
+          uprintf("x: %d, y: %d, reportX: %d, reportY: %d", xValue, yValue, currentReport.x, currentReport.y);
+        #endif
+
+        if (currentReport.x < joystickThreshold && currentReport.x > -joystickThreshold){
+
+            currentReport.x = 0;
+
+        }
+
+        if (currentReport.y < joystickThreshold && currentReport.y > -joystickThreshold){
+
+            currentReport.y = 0;
+
+        }
+
+        pointing_device_set_report(currentReport);
+
+        pointing_device_send();
+}
 */

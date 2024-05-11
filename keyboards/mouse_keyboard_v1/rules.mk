@@ -12,10 +12,9 @@ SERIAL_DRIVER = bitbang
 # https://note.com/yinouet1001/n/n1537fba884e3
 # http://www.neko.ne.jp/~freewing/hardware/qmk_firmware_test_analog_joystick_function_psp2000/
 # ポインティングデバイスにジョイスティックを使うと宣言  
-# x方向はいい感じに動いたが、y方向は全く動かない。ジョイスティックが壊れているのか、キャリブレートが間違っているのか不明
 #POINTING_DEVICE_ENABLE = yes
 #POINTING_DEVICE_DRIVER = analog_joystick
-# 多分この二行は意味ない？ような気がした
+# じぶんでマウスレポートを作成する場合は以下をコメントアウト。しない場合は、上をコメントアウト
 #JOYSTICK_ENABLE = yes
 #JOYSTICK_DRIVER = analog
 
@@ -29,3 +28,8 @@ SERIAL_DRIVER = bitbang
 
 # マウスキーを使うと宣言 スクロールや、クリックを使うために必要
 MOUSEKEY_ENABLE = yes
+
+
+
+# デバッグ用に定義
+CONSOLE_ENABLE = yes
